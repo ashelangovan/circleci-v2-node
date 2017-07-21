@@ -1,6 +1,6 @@
 version: 2
 jobs:
-  build:
+build:
     working_directory: ~/ashwin-97/circlenode
     docker:
       - image: circleci/node:4.8.3
@@ -17,7 +17,7 @@ jobs:
         name: Mysql installation
         command: npm install mysql
       - run:
-        name: testing
+        name: Testing
          environment:
             DB_USER: root
             DB_NAME: mroom
