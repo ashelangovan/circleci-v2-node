@@ -9,7 +9,7 @@ jobs:
           MYSQL_USER: root
           MYSQL_DATABASE: mroom
       
-    working_directory: ~/circlenode
+    working_directory: ~/ashwin-97/circlenode
 
     branches:
       - only:
