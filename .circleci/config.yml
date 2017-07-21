@@ -2,8 +2,12 @@ version: 2
 jobs:
   build:
     docker:
-      # specify the version you desire here
+    
       - image: circleci/node:4.8.3
+      - image: circleci/mysql:latest
+        environment:
+          MYSQL_USER: root
+          MYSQL_DATABASE: mroom
       
     working_directory: ~/circlenode
 
@@ -22,4 +26,9 @@ jobs:
         command: npm install mysql
       - run:
         name: testing
+         environment:
+            DB_USER: root
+            DB_NAME: mroom
+            PORT: 3000
+            NODE_ENV: test
         command: nodeunit app.js
