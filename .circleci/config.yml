@@ -17,4 +17,7 @@ jobs:
           name: Mysql installation
           command: npm install mysql
       - run:
+          name: nodeunit
+          command: npm install nodeunit
+      - run:
           command: nodeunit app.js
