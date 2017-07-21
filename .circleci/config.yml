@@ -17,10 +17,4 @@ build:
         name: Mysql installation
         command: npm install mysql
       - run:
-        name: Testing
-         environment:
-            DB_USER: root
-            DB_NAME: mroom
-            PORT: 3000
-            NODE_ENV: test
         command: nodeunit app.js
