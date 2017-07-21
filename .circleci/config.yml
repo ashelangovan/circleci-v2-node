@@ -1,12 +1,11 @@
 version: 2
-defaults: &defaults
-  working_directory: ~/ashwin-97/circlenode
+
+jobs:
+  build:
+    working_directory: ~/ashwin-97/circlenode
     docker:
       - image: circleci/node:4.8.3
       - image: circleci/mysql:latest
-jobs:
-  build:
-    <<: *defaults
     environment:
           MYSQL_USER: root
           MYSQL_DATABASE: mroom
