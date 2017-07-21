@@ -8,9 +8,6 @@ jobs:
     environment:
           MYSQL_USER: root
           MYSQL_DATABASE: mroom
-    branches:
-      - only:
-        master
     steps:
       - checkout
       - run:
