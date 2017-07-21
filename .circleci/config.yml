@@ -8,18 +8,18 @@ jobs:
     working_directory: ~/circlenode
 
     branches:
-      -only:
+      - only:
         master
      
 
     steps:
       - checkout
-      -run:
+      - run:
         name: Install Dependencies
         command: npm install
-      -run:
+      - run:
         name: Mysql installation
         command: npm install mysql
-      -run:
+      - run:
         name: testing
         command: nodeunit app.js
