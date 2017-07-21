@@ -18,6 +18,6 @@ jobs:
           command: npm install mysql
       - run:
           name: Nodeunit
-          command: npm install nodeunit -g
+          command: sudo npm install nodeunit -g
       - run:
           command: nodeunit app.js
