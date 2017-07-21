@@ -1,6 +1,6 @@
 version: 2
 jobs:
-build:
+  build:
     working_directory: ~/ashwin-97/circlenode
     docker:
       - image: circleci/node:4.8.3
