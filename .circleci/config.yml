@@ -1,0 +1,26 @@
+version: 2
+jobs:
+  build:
+    docker:
+      # specify the version you desire here
+      - image: circleci/node:4.8.3
+      
+    working_directory: ~/circlenode
+
+    branches:
+      -only:
+        master
+     
+
+    steps:
+      - checkout
+      -setup_remote_docker
+      -run:
+        name: Install Dependencies
+        command: npm install
+      -run:
+        name: Mysql installation
+        command: npm install mysql
+      -run:
+        name: testing
+        command: nodeunit app.js
