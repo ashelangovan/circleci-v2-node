@@ -6,6 +6,7 @@ jobs:
       - image: circleci/node:4.8.3
       - image: circleci/mysql
     environment:
+      - MYSQL_HOST: 127.0.0.1
       - MYSQL_USER: root
       - MYSQL_PASSWORD: root
       - MYSQL_DATABASE: mroom
