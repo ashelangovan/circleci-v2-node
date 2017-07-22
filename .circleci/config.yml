@@ -4,7 +4,7 @@ jobs:
     working_directory: ~/ashwin-97/circlenode
     docker:
       - image: circleci/node:4.8.3
-      - image: circleci/mysql:latest
+      - image: circleci/mysql
     environment:
       - MYSQL_HOST: localhost
       - MYSQL_USER: root
