@@ -6,7 +6,7 @@ jobs:
       - image: circleci/node:4.8.3
       - image: circleci/mysql
     environment:
-      - MYSQL_ROOT_PASSWORD=ubuntu
+      - MYSQL_ROOT_PASSWORD: ubuntu
       - DATABASE_URL: mysql://ubuntu:@127.0.0.1:3306/mroom
       - MYSQL_USER: root
       - MYSQL_PASSWORD: root
