@@ -6,12 +6,21 @@ jobs:
       - image: circleci/node:4.8.3
       - image: circleci/mysql
     environment:
-      - MYSQL_HOST: localhost
       - MYSQL_USER: root
       - MYSQL_PASSWORD: root
       - MYSQL_DATABASE: mroom
     steps:
       - checkout
+      - run:
+          name: Waiting for Mysql to be ready
+          command: |
+            for i in `seq 1 10`;
+            do
+              nc -z localhost 3306 && echo Success && exit 0
+              echo -n .
+              sleep 1
+            done
+            echo Failed waiting for Mysql && exit 1
       - run:
           name: Install Dependencies
           command: npm install && npm install mysql
