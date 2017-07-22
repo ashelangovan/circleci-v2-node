@@ -6,10 +6,9 @@ jobs:
       - image: circleci/node:4.8.3
       - image: circleci/mysql:latest
     environment:
-      - MYSQL_ROOT_HOST=%
-      - MYSQL_USER=root
-      - MYSQL_PASSWORD=root
-      - MYSQL_DATABASE=mroom
+      - MYSQL_USER: root
+      - MYSQL_PASSWORD: root
+      - MYSQL_DATABASE: mroom
     steps:
       - checkout
       - run:
