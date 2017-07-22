@@ -12,10 +12,7 @@ jobs:
       - checkout
       - run:
           name: Install Dependencies
-          command: npm install
-      - run:
-          name: Mysql installation
-          command: npm install mysql
+          command: npm install && npm install mysql
       - run:
           name: Nodeunit
           command: sudo npm install nodeunit -g
