@@ -15,13 +15,13 @@ jobs:
       - run:
           name: Waiting for Mysql to be ready
           command: |
-            for i in `seq 1 10`;
+            for i in `seq 1 5`;
             do
-              nc -z localhost 3306 
+              nc -z localhost 3306 && exit 0
               echo -n .
               sleep 1
             done
-            echo Failed waiting for Mysql 
+            echo Failed waiting for Mysql &&exit 1
       - run:
           name: Install Dependencies
           command: npm install && npm install mysql
