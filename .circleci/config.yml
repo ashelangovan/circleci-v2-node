@@ -28,7 +28,7 @@ jobs:
             echo Failed waiting for Mysql && exit 1
       - run:
           name: Install Dependencies
-          command: npm install && npm install mysql
+          command: npm install && npm install mysql && sudo npm install mocha
       - run:
           name: Nodeunit
           command: sudo npm install nodeunit -g
