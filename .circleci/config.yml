@@ -30,7 +30,7 @@ jobs:
           name: Install Dependencies
           command: npm install && npm install mysql && sudo npm install mocha
       - run:
-          name: Nodeunit
+          name: Nodeunit here
           command: sudo npm install nodeunit -g
       - run:
           command: nodeunit app.js
